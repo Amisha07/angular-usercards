@@ -1,0 +1,23 @@
+<div class="section-light-gray">
+  <div class="container">
+    <div class="row">
+      <div *ngFor="let user of users" class="col-lg-6 col-md-6 col-sm-12">
+        <user-card [user]="user"></user-card>
+
+        <!-- <button type="button" class="btn btn-primary" (click)="selecteduser = user; staticModal.show()">Static modal</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+
+ 
+<div class="modal fade" bsModal #staticModal="bs-modal" [config]="{backdrop: 'static'}"
+     tabindex="-1" role="dialog" aria-labelledby="dialog-static-name">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <user-card [user]="selecteduser"></user-card>
+    </div>
+  </div>
+</div>

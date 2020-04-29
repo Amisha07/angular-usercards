@@ -1,0 +1,22 @@
+<div class="container">
+ 
+<div class="card">
+  <div class="card-header cursor-pointer" (click)="isShow=!isShow">
+  <h3><i *ngIf="isShow" class="fas fa-arrow-alt-circle-up"></i> 
+  <i *ngIf="!isShow" class="fas fa-arrow-alt-circle-down"></i> 
+  Technology Demonstrated for {{title}} </h3>
+  </div>
+  <ul *ngIf="isShow" class="list-group" >
+    <li class="list-group-item">Global State Management by RxJS</li>
+    <li class="list-group-item">Observable service to consume third party services</li>
+    <li class="list-group-item">Unique Sass classes to create employee cards</li>
+    <li class="list-group-item">Parent component to child component intraction</li>
+    
+     <li class="list-group-item">Expand and collapseable card
+      <span class="badge badge-primary">Click on header above</span></li>
+
+</ul>
+</div>
+
+</div>
+<user></user>
